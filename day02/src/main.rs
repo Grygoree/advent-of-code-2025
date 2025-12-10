@@ -43,6 +43,7 @@ pub fn part1(input: &str) -> u64 {
     sum_of_invalid_nums
 }
 
+#[allow(dead_code)]
 fn is_invalid_thrice(num: u64) -> bool {
     let digits = num.ilog10() + 1;
 
@@ -61,6 +62,7 @@ fn is_invalid_thrice(num: u64) -> bool {
     left == right && middle == left
 }
 
+#[allow(dead_code)]
 fn is_invalid_five_times(num: u64) -> bool {
     let digits = num.ilog10() + 1;
 
@@ -91,8 +93,10 @@ fn is_invalid_five_times(num: u64) -> bool {
     true
 }
 
+#[allow(dead_code)]
 fn is_invalid_seven_times() {}
 
+#[allow(dead_code)]
 fn juan_method(num: u64) {
     let prime_candidates = [2, 3, 5, 7];
     let digits = num.ilog10() + 1;
@@ -102,6 +106,7 @@ fn juan_method(num: u64) {
         .filter(|p| digits % p == 0)
         .map(|p| p + 1);
 
+    println!("{:?}", sequence_lengths);
     todo!("Bored");
 }
 
